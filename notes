@@ -1,1 +1,25 @@
 
+data structures
+
+list - allow duplicate obj
+set - don’t allow duplicate obj, can’t have more than 1 element refer to same obj (or obj that are consider equal)
+map - key-values pair
+
+ArrayList
+Array
+LinkedList
+- singly LinkedList
+- doubly LinkedList
+Map
+
+Stack
+Queue
+
+HashSet
+TreeSet
+Set
+HashTable
+
+AdjacencyList
+AdjacencyMatrix
+
