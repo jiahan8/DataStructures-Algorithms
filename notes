@@ -5,7 +5,7 @@ list - allow duplicate obj
 set - don’t allow duplicate obj, can’t have more than 1 element refer to same obj (or obj that are consider equal)
 map - key-values pair
 
-Access, Search, Insert, Delete, Sort
+Access (get), Search(contains), Insert, Delete, Sort
 linear vs non-linear
 
 Object
@@ -16,44 +16,46 @@ Arrays
 - Array
 
 List
-- ArrayList
+- ArrayList - O(1), O(n), O(1), O(n), 
 - LinkedList (List, Queue)
-    - singly LinkedList
-    - doubly LinkedList
-    - circular LinkedList
+    - singly LinkedList - O(n), O(n), O(1), O(1), 
+    - doubly LinkedList - O(n), O(n), O(1), O(1), 
+    - circular LinkedList - 
 - Vector
 
-Stack
+Vector
+- Stack - first in last out - O(n), O(n), Push O(1), Pop O(1)
 
 Queue
-- Priority Queue
+- Queue - first in first out - O(n), O(n), Enqueue O(1), Dequeue O(1)
+- Priority Queue - 
 
 
 Set
-- HashSet
-    - LinkedHashSet
+- HashSet - get O(1), contains O(1), add O(1), remove O(1), 
+    - LinkedHashSet - O(1), O(1), O(1), O(1), 
 SortedSet
-- TreeSet
+- TreeSet - O(log n), O(log n), O(log n), O(log n), 
 
 Map
-- HashMap
-    - LinkedHashMap
-- HashTable
+- HashMap - get O(1), ContainsKey O(1), put O(1), remove O(1) - average lookup time is O(1), worst case look up time is O(n) if hash function is not good
+    - LinkedHashMap - O(1), O(1), O(1), O(1), 
+- HashTable - O(X), contains O(n), add O(n), remove O(n) - similar to HashMap, average lookup time is O(1), worst case look up time is O(n) if hash function is not good
 - HashTree
 SortedMap
-- TreeMap
+- TreeMap - get O(log n), ContainsKey O(log n), put O(log n), remove O(log n)
 
 Trees
 Binary Trees
-- Binary Search Tree
-- Binary Tree
+- Binary Search Tree - O(X), search O(n), insert O(n), delete O(n) - most of the time O(log n) for search, insert and delete
+- Binary Tree - O(X), search O(n), insert O(n), delete O(n) 
 Heaps
-- Binary Heap
-- Heap
+- Binary Heap - O(X), search O(n), insert O(log n), delete O(log n), peek O(1), merge O(n)
+- Heap - O(X), search max/min O(1), insert O(log n), delete max/min O(log n), search then delete O(n)
 
-Graphs
-- AdjacencyList
-- AdjacencyMatrix
+Graphs -  Directed Graph, Undirected Graph, dense graph (eg. complete graph), sparse graph (few edges), breadth first search, depth first search
+- AdjacencyList - check if there is edges between 2 nodes O(n), directed graph O(n^2), undirected graph O(n)
+- AdjacencyMatrix - check if there is edges between 2 nodes O(1), directed graph O(n^2), undirected graph O(n^2)
 - Graph
 - Directed Graph
 - Undirected Graph
