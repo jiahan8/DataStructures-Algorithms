@@ -21,14 +21,14 @@ List
     - singly LinkedList - O(n), O(n), O(1), O(1), 
     - doubly LinkedList - O(n), O(n), O(1), O(1), 
     - circular LinkedList - 
-- Vector
+- Vector - 
 
 Vector
 - Stack - first in last out - O(n), O(n), Push O(1), Pop O(1)
 
 Queue
 - Queue - first in first out - O(n), O(n), Enqueue O(1), Dequeue O(1)
-- Priority Queue - 
+- Priority Queue - O(X), search max/min O(1), insert O(log n), delete max/min O(log n), search then delete O(n)
 
 
 Set
@@ -40,7 +40,7 @@ SortedSet
 Map
 - HashMap - get O(1), ContainsKey O(1), put O(1), remove O(1) - average lookup time is O(1), worst case look up time is O(n) if hash function is not good
     - LinkedHashMap - O(1), O(1), O(1), O(1), 
-- HashTable - O(X), contains O(n), add O(n), remove O(n) - similar to HashMap, average lookup time is O(1), worst case look up time is O(n) if hash function is not good
+- HashTable - O(X), contains O(n), add O(n), remove O(n) - similar to HashMap, average lookup time is O(1), worst case look up time is O(n) if the hash function is efficient
 - HashTree
 SortedMap
 - TreeMap - get O(log n), ContainsKey O(log n), put O(log n), remove O(log n)
