@@ -31,20 +31,21 @@ Queue
 - Priority Queue - O(X), search max/min O(1), insert O(log n), delete max/min O(log n), search then delete O(n)
 
 
-Set (don’t allow duplicate obj)
+Set (don’t allow duplicate obj, cannot access elements by index)
 - HashSet - get O(X), contains O(1), add O(1), remove O(1) - can contain at most a null value (even though can add multiple null values), null value has a size of 1 - does not maintain original order - better performance than LinkedHashSet and TreeSet
-    - LinkedHashSet - get O(1), contains O(1), add O(1), remove O(1) - original order - null (same as HashSet) - 
+    - LinkedHashSet - get O(1), contains O(1), add O(1), remove O(1) - original order - at most a null value (same as HashSet) - 
 SortedSet
-- TreeSet - O(log n), O(log n), O(log n), O(log n) - cannot contain a null value (gives Null Pointer Exception) - return sorted elements - order use supplied Comparator else use natural asc order - use compare() and compareTo() to compare elements so it removes duplicates values, does not use equals() or hashCode() to compare elements
+- TreeSet - O(X), contains O(log n), add O(log n), remove O(log n) - cannot contain a null value (gives Null Pointer Exception) - return sorted elements - order use supplied Comparator else use natural asc order - use compare() and compareTo() to compare elements so it removes duplicates values, does not use equals() or hashCode() to compare elements - comparator() method returns comparator used to order the elements else null
+for(String a : set)
 
 
-Map
-- HashMap - get O(1), ContainsKey O(1), put O(1), remove O(1) - average lookup time is O(1), worst case look up time is O(n) if hash function is not good
+Map (key-value pairs)
+- HashMap ( imp Map<k,v>, ext AbstractMap<k,v> ) - get(Object key) O(1), containsKey && containsValue O(1), put(key, value) O(1), remove O(1) ( remove(key) && remove(key, value) ) - average lookup time is O(1), worst case look up time is O(n) if the hash function is not good - loop through elements using keySet() (to access keys), values() (to access values), Map.Entry entrySet() then getKey() && getValue() (to access both keys and values)
     - LinkedHashMap - O(1), O(1), O(1), O(1), 
-- HashTable - O(X), contains O(n), add O(n), remove O(n) - similar to HashMap, average lookup time is O(1), worst case look up time is O(n) if the hash function is efficient
+- Hashtable ( imp Map<k,v>, ext Dictionary<k,v> ) - get(key) O(1), contains O(1), put O(1), remove O(1) - similar to HashMap, average lookup time is O(1), worst case look up time is O(n) if the hash function is efficient - 
 - HashTree
 SortedMap
-- TreeMap - get O(log n), ContainsKey O(log n), put O(log n), remove O(log n)
+- TreeMap ( imp NavigableMap<k,v>, ext AbstractMap<k,v> ) - get O(log n), ContainsKey O(log n), put O(log n), remove O(log n)
 
 
 Trees
