@@ -6,6 +6,7 @@ set - don’t allow duplicate obj, can’t have more than 1 element refer to sam
 map - key-values pair
 
 Access (get), Search(contains), Insert, Delete, Sort
+ordering
 linear vs non-linear
 
 Object
@@ -41,7 +42,7 @@ for(String a : set)
 
 Map (key-value pairs)
 - HashMap ( imp Map<k,v>, ext AbstractMap<k,v> ) - get(Object key) O(1), containsKey && containsValue O(1), put(key, value) O(1), remove O(1) ( remove(key) && remove(key, value) ) - average lookup time is O(1), worst case look up time is O(n) if the hash function is not good - loop through elements using keySet() (to access keys), values() (to access values), Map.Entry entrySet() then getKey() && getValue() (to access both keys and values)
-    - LinkedHashMap - O(1), O(1), O(1), O(1), 
+    - LinkedHashMap ( imp Map<k,v>, ext HashMap<k,v> ) - O(1), O(1), O(1), O(1) - insertion order - allows at most one null key and allow multiple null values (same as HashMap)
 - Hashtable ( imp Map<k,v>, ext Dictionary<k,v> ) - get(key) O(1), containsKey containsValue O(1), put(key, value) O(1), remove(k) remove(k,v) O(1) - similar to HashMap, average lookup time is O(1), worst case look up time is O(n) if the hash function is efficient - 
 - HashTree
 SortedMap
@@ -58,11 +59,20 @@ TreeMap - non-synchronized - use comparator or comparable or natural key order -
 
 Trees
 Binary Trees
-- Binary Search Tree - O(X), search O(n), insert O(n), delete O(n) - most of the time O(log n) for search, insert and delete
+- Binary Search Tree - O(X), search O(log n), search max O(1), insert O(log n), delete O(n), create O(n log n) - most of the time O(log n) for search, insert and delete
 - Binary Tree - O(X), search O(n), insert O(n), delete O(n) 
 Heaps
-- Binary Heap - O(X), search O(n), insert O(log n), delete O(log n), peek O(1), merge O(n)
+- Binary Heap - O(X), search O(n), search max/min O(1), insert O(log n), delete O(log n), delete max/min O(log n), peek O(1), merge O(n), search then delete O(n), build O(n) - heapify / percolate up - heap sort
 - Heap - O(X), search max/min O(1), insert O(log n), delete max/min O(log n), search then delete O(n)
+
+Binary Search Tree vs Binary Heap (complete binary tree)
+BST - search any O(log n) (better) - build O(n log n) - average time insertion O(log n) - 
+Binary Heap - max heap / min heap - level order insertion, if the new element is larger than its parent then do heapify else insert as level order - search - search any O(n) search max/min O(1) - build (n) (better) - average time insertion O(1) (better) - 
+insert (one element)
+build (a list of elements)
+overall,
+BST - find any elements
+Binary Heap - find max/min, build, insert, efficiently implemented on top of arrays
 
 
 Graphs -  Directed Graph, Undirected Graph, dense graph (eg. complete graph), sparse graph (few edges), breadth first search, depth first search
