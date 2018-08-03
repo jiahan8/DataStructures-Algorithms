@@ -42,10 +42,18 @@ for(String a : set)
 Map (key-value pairs)
 - HashMap ( imp Map<k,v>, ext AbstractMap<k,v> ) - get(Object key) O(1), containsKey && containsValue O(1), put(key, value) O(1), remove O(1) ( remove(key) && remove(key, value) ) - average lookup time is O(1), worst case look up time is O(n) if the hash function is not good - loop through elements using keySet() (to access keys), values() (to access values), Map.Entry entrySet() then getKey() && getValue() (to access both keys and values)
     - LinkedHashMap - O(1), O(1), O(1), O(1), 
-- Hashtable ( imp Map<k,v>, ext Dictionary<k,v> ) - get(key) O(1), contains O(1), put O(1), remove O(1) - similar to HashMap, average lookup time is O(1), worst case look up time is O(n) if the hash function is efficient - 
+- Hashtable ( imp Map<k,v>, ext Dictionary<k,v> ) - get(key) O(1), containsKey containsValue O(1), put(key, value) O(1), remove(k) remove(k,v) O(1) - similar to HashMap, average lookup time is O(1), worst case look up time is O(n) if the hash function is efficient - 
 - HashTree
 SortedMap
-- TreeMap ( imp NavigableMap<k,v>, ext AbstractMap<k,v> ) - get O(log n), ContainsKey O(log n), put O(log n), remove O(log n)
+- TreeMap ( imp NavigableMap<k,v>, ext AbstractMap<k,v> ) - get(k) O(log n), containsKey containsValue O(log n), put(k,v) O(log n), remove(k) remove(k,v) O(log n)
+
+HashMap vs Hashtable
+HashMap - non-synchronized - allows at most one null key and allow multiple null values - superclass of LinkedHashSet
+Hashtable - synchronized - does not allow null key or value
+
+HashMap vs TreeMap
+HashMap - no ordering - more time-efficient
+TreeMap - non-synchronized - use comparator or comparable or natural key order - does not allow null key (null pointer exception) but can contains multiple null values - more memory-efficient
 
 
 Trees
