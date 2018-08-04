@@ -7,14 +7,17 @@ map - key-values pair
 
 Access (get), Search(contains), Insert, Delete, Sort
 ordering
-linear vs non-linear
+null values
+linear vs non-linear, amortized
 
 Object
 - Arrays
 - Collections
 
 Arrays
-- Array
+- Array - get O(1), contains O(n), insert O(n), delete O(n)
+	- insert is O(n) because when insert in the middle of array, need to shift indexes
+	- dynamic array - insert/delete at the beginning O(n), insert/delete in the middle O(n), insert/delete at the end O(1)
 
 List
 - ArrayList - O(1), O(n), O(1), O(n), 
@@ -29,7 +32,20 @@ Vector
 
 Queue
 - Queue - first in first out - O(n), O(n), Enqueue O(1), Dequeue O(1)
-- Priority Queue - O(X), search max/min O(1), insert O(log n), delete max/min O(log n), search then delete O(n)
+- Priority Queue (like heap structure (tree)) - O(X), search max/min O(1), insert O(log n), delete max/min O(log n), search then delete O(n) (contains is O(n) then delete is O(log n))
+	- level order ordering - root is min by default, parent smaller than child by default - 
+	- smallest element get remove first by default
+	- use comparator, compare() method to custom its ordering
+	- cannot add null value
+	- implement using HashMap for better performance on lookup time O(log n) then in the process of removing, HashMap map one element (key) to one or multiple (duplicate elements) indexes (values)
+
+Priority Queue vs Heap
+Priority Queue - ADT, can use heap for implementation, compare values using comparator / comparable else use default ordering, 
+Heap - data structure, find max/min, 
+
+ADT vs data structure
+ADT - logical description (interface, what it does) - List, Map
+data structure - concrete (class, how it does it)- ArrayList, LinkedList, HashMap, TreeMap
 
 
 Set (don’t allow duplicate obj, cannot access elements by index)
@@ -67,9 +83,10 @@ Heaps
 
 Binary Search Tree vs Binary Heap (complete binary tree)
 BST - search any O(log n) (better) - build O(n log n) - average time insertion O(log n) - 
-Binary Heap - max heap / min heap - level order insertion, if the new element is larger than its parent then do heapify else insert as level order - search - search any O(n) search max/min O(1) - build (n) (better) - average time insertion O(1) (better) - 
+Binary Heap - max heap / min heap - level order insertion, if the new element is larger than its parent then do heapify else insert as level order - search any O(n) search max/min O(1) - build (n) (better) - average time insertion O(1) (better) - 
 insert (one element)
 build (a list of elements)
+
 overall,
 BST - find any elements
 Binary Heap - find max/min, build, insert, efficiently implemented on top of arrays
