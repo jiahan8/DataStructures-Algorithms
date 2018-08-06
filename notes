@@ -40,12 +40,17 @@ Queue
 	- implement using HashMap for better performance on lookup time O(log n) then in the process of removing, HashMap map one element (key) to one or multiple (duplicate elements) indexes (values)
 
 Priority Queue vs Heap
-Priority Queue - ADT, can use heap for implementation, compare values using comparator / comparable else use default ordering, 
+Priority Queue - ADT, can use heap for implementation, can compare values using comparator / comparable else use default ordering, 
 Heap - data structure, find max/min, 
 
 ADT vs data structure
 ADT - logical description (interface, what it does) - List, Map
 data structure - concrete (class, how it does it)- ArrayList, LinkedList, HashMap, TreeMap
+
+Comparator (compare()) vs Comparable (compareTo())
+a.compareTo(b) - natural ordering, Collections.sort(list), 
+compare(a,b) - can use to compare different objects, Collections.sort(list, compareObject ), eg. if(a.length > b.length) return 1, then string with the shortest length will be printed first
+
 
 
 Set (don’t allow duplicate obj, cannot access elements by index)
