@@ -109,3 +109,22 @@ Hashes
 - RollingHash
 
 
+hash function
+- get input key (string)
+- pass into hash function
+- generate hash code
+- transform hash code to index
+
+
+
+
+
+
+
+
+
+
+
+
+
+
