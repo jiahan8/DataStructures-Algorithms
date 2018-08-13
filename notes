@@ -116,7 +116,11 @@ hash function
 - transform hash code to index
 
 
-
+bit manipulation
+memory (stack and heap)
+recursion
+dynamic programming
+big o time and space
 
 
 
