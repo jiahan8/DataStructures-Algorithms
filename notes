@@ -123,8 +123,19 @@ bit manipulation
 
 
 memory (stack and heap)
+
 recursion
+- tree traversal
+    - bfs
+        - level order
+    - dfs
+        - pre order
+        - in order
+        - post order
+- binary tree max depth
+
 dynamic programming
+
 big o time and space
 
 
