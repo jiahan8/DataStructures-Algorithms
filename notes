@@ -133,6 +133,11 @@ recursion
         - in order
         - post order
 - binary tree max depth
+- merge two binary trees
+- binary tree traversal
+- invert binary tree
+- convert binary search tree to greater tree (bst to greater invert bst)
+- same tree (same structure, same values)
 
 dynamic programming
 
