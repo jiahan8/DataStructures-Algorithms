@@ -138,6 +138,10 @@ recursion
 - invert binary tree
 - convert binary search tree to greater tree (bst to greater invert bst)
 - same tree (same structure, same values)
+- symmetric tree
+- unique binary tree
+- binary subtree
+- diameter of binary tree
 
 dynamic programming
 
